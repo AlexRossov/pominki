@@ -1,0 +1,526 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #c2c2c2;
+  margin: 0;
+  padding: 0;
+  background: black url(../img/marble.jpg) 100% repeat;
+}
+
+.nav_fullScreen a {
+  text-decoration: none;
+  color: #c2c2c2;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-shadow: black 3px 3px 5px;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.burger__menu {
+  display: none;
+}
+
+.mobile_popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80%;
+  max-width: 320px;
+  background-color: rgba(0, 0, 0, 0.95);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  padding: 2rem 1rem;
+}
+
+.container_itemMenuNav__mobile {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container_itemMenuNav__mobile a {
+  color: #c2c2c2;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Показать меню */
+.mobile_popup.menu--active {
+  transform: translateX(0);
+}
+
+/* Запрет скролла на фоне */
+body.no-scroll {
+  overflow: hidden;
+}
+
+.burger_icon {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.burger_line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger_line:nth-child(1) {
+  top: 0;
+}
+
+.burger_line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger_line:nth-child(3) {
+  bottom: 0;
+}
+
+/* Анимация крестика */
+.burger--active .burger_line:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burger--active .burger_line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger--active .burger_line:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.nav_fullScreen {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.nav_fullScreen__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav_fullScreen__logo img {
+  width: 100px;
+}
+
+.container_itemMenuNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.title {
+  font-size: 85px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #c2c2c2;
+  text-shadow: black 10px 10px 20px;
+}
+
+.subtitle {
+  font-size: 85px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0;
+  padding-bottom: 50px;
+  color: #c2c2c2;
+  text-shadow: black 10px 10px 20px;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.5;
+  text-align: center;
+  /*text-shadow: black 2px 2px 2px;*/
+  letter-spacing: 1px;
+  display: block;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: rgba(194, 194, 194, 0.8);
+}
+
+.features {
+  padding-top: 80px;
+}
+
+.features__title {
+  letter-spacing: 2px;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: black 5px 5px 5px;
+}
+
+.wrapCards {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 270px;
+  height: 476px;
+  position: relative;
+}
+
+.cardBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 476px;
+  width: 270px;
+  background-color: #212121;
+  border-radius: 10px;
+}
+
+.imgCard {
+  position: absolute;
+  margin-top: 40px;
+  width: 216px;
+  left: 10%;
+  box-shadow: black 0 0 25px;
+  border-radius: 10px;
+}
+
+.textCards {
+  position: absolute;
+  color: black;
+  font-weight: 700;
+  width: 77%;
+  bottom: 40px;
+  left: 50%;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  transform: translateX(-50%);
+  padding: 15px 10px;
+  background-color: rgba(194, 194, 194, 0.8);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.menuTitle {
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  padding-top: 100px;
+  text-align: center;
+  text-shadow: black 5px 5px 5px;
+}
+
+.pageButton {
+  display: block;
+  max-width: 200px;
+  margin: 70px auto 120px;
+  padding: 25px 80px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: rgba(194, 194, 194, 0.8);
+  border-radius: 20px;
+  text-shadow: none;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+.titleContacts {
+  font-size: 50px;
+  padding-top: 50px;
+  text-align: center;
+  text-shadow: black 5px 5px 5px;
+}
+
+.subtitleContacts,
+.subtitleContacts > a {
+  font-size: 30px;
+  text-align: center;
+  text-shadow: black 5px 5px 5px;
+  color: #c2c2c2;
+  text-decoration: none;
+}
+
+#map {
+  height: 570px;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 0;
+  filter: grayscale(1) brightness(1) invert(1);
+}
+
+.wrapFoto {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapFoto img {
+  width: 60%;
+  border-radius: 5px;
+}
+
+@media (max-width: 1370px) {
+  .nav_fullScreen {
+    padding-top: 10px;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-size: 90px;
+  }
+
+  .subtitle {
+    font-size: 90px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1169px) {
+  .wrapper {
+    max-width: 1020px;
+  }
+
+  .cardBg {
+    height: 423px;
+    width: 240px;
+  }
+
+  .imgCard {
+    width: 192px;
+  }
+
+  .textCards {
+    width: 65%;
+    left: 48%;
+    font-size: 15px;
+    bottom: 75px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container_itemMenuNav {
+    gap: 30px;
+  }
+
+  .wrapCards {
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+  }
+
+  .cardBg {
+    height: 476px;
+    width: 270px;
+  }
+
+  .imgCard {
+    width: 216px;
+  }
+
+  .textCards {
+    width: 77%;
+    left: 50%;
+    font-size: 17px;
+    bottom: 50px;
+  }
+
+  .wrapFoto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapFoto img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 991px) {
+  .container_itemMenuNav {
+    gap: 15px;
+  }
+
+  .nav_fullScreen a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #map {
+    height: 470px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+  }
+
+  .title {
+    margin-top: 200px;
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 80px;
+  }
+
+  .description {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .menuTitle {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .subtitleContacts,
+  .subtitleContacts > a {
+    font-size: 24px;
+  }
+
+  .nav_fullScreen {
+    display: none;
+  }
+
+  .burger__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1005;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .burger__menu__logo {
+    margin-left: 10px;
+  }
+
+  .burger_icon {
+    margin-right: 30px;
+  }
+
+  .tel_mobile {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .burger__menu__logo img {
+    width: 100px;
+  }
+
+  .social_icon img {
+    width: 60px;
+    margin-right: 30px;
+  }
+
+  .title_social {
+    margin-top: 50px;
+    font-size: 18px;
+  }
+
+  body {
+    background: black url(../img/marble.jpg) 100% repeat;
+  }
+}
+
+@media (max-width: 450px) {
+  .burger__menu__logo img {
+    width: 70px;
+  }
+
+  .tel_mobile {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .title {
+    margin-top: 150px;
+    font-size: 45px;
+  }
+
+  .subtitle {
+    font-size: 45px;
+    padding-bottom: 70px;
+  }
+
+  .description {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .features__title {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  .wrapCards {
+    gap: 50px;
+  }
+
+  .menuTitle {
+    font-size: 35px;
+    margin-bottom: 0;
+    padding-top: 40px;
+  }
+
+  .pageButton {
+    max-width: 130px;
+    margin-bottom: 100px;
+  }
+
+  .titleContacts {
+    padding-top: 70px;
+    font-size: 40px;
+  }
+
+  .subtitleContacts,
+  .subtitleContacts > a {
+    font-size: 19px;
+  }
+
+  .burger_icon {
+    margin-right: 20px;
+  }
+
+  .features {
+    padding-top: 20px;
+  }
+}
