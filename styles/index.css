@@ -80,7 +80,9 @@ body.no-scroll {
   height: 3px;
   background-color: white;
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .burger_line:nth-child(1) {
@@ -158,17 +160,28 @@ body.no-scroll {
 }
 
 .description {
+  width: 70%;
+  margin: 0 auto;
   font-size: 25px;
   font-weight: 700;
   color: #000;
   line-height: 1.5;
   text-align: center;
-  /*text-shadow: black 2px 2px 2px;*/
   letter-spacing: 1px;
   display: block;
   padding: 50px;
   border-radius: 20px;
   background-color: rgba(194, 194, 194, 0.8);
+}
+
+.description__text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.no_bold {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .features {
@@ -187,46 +200,98 @@ body.no-scroll {
   padding-top: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .card {
   width: 270px;
-  height: 476px;
   position: relative;
-}
-
-.cardBg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 476px;
-  width: 270px;
   background-color: #212121;
   border-radius: 10px;
+  padding-bottom: 40px;
 }
 
 .imgCard {
-  position: absolute;
+  display: block;
   margin-top: 40px;
   width: 216px;
-  left: 10%;
+  margin-left: 27px;
   box-shadow: black 0 0 25px;
   border-radius: 10px;
 }
 
 .textCards {
-  position: absolute;
+  display: block;
   color: black;
   font-weight: 700;
   width: 77%;
-  bottom: 40px;
-  left: 50%;
   letter-spacing: 1.5px;
   line-height: 1.5;
-  transform: translateX(-50%);
+  margin-left: 21px;
+  margin-top: 30px;
   padding: 15px 10px;
   background-color: rgba(194, 194, 194, 0.8);
   border-radius: 20px;
+  text-align: center;
+}
+
+.compositionDetails {
+  position: relative;
+  margin-top: 30px;
+}
+
+.compositionButton {
+  list-style: none;
+  width: 77%;
+  margin: 0 auto;
+  padding: 14px 12px;
+  border-radius: 20px;
+  background-color: rgba(194, 194, 194, 0.8);
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.compositionButton::-webkit-details-marker {
+  display: none;
+}
+
+.compositionButton::marker {
+  content: '';
+}
+
+.compositionButton__icon {
+  display: inline-block;
+  margin-left: 2px;
+  transform: translateY(1px);
+  transition: transform 0.3s ease;
+}
+
+.compositionDetails[open] .compositionButton__icon {
+  transform: rotate(180deg);
+}
+
+.cardComposition {
+  width: 77%;
+  margin: 5px auto 0;
+  padding: 14px 12px;
+  border-radius: 20px;
+  background-color: rgba(194, 194, 194, 0.8);
+  box-sizing: border-box;
+}
+
+.cardComposition p {
+  margin: 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
   text-align: center;
 }
 
@@ -311,9 +376,9 @@ body.no-scroll {
     max-width: 1020px;
   }
 
-  .cardBg {
-    height: 423px;
-    width: 240px;
+  .card {
+    --card-width: 240px;
+    --card-height: 423px;
   }
 
   .imgCard {
@@ -337,11 +402,6 @@ body.no-scroll {
     flex-wrap: wrap;
     gap: 100px;
     justify-content: center;
-  }
-
-  .cardBg {
-    height: 476px;
-    width: 270px;
   }
 
   .imgCard {
@@ -394,9 +454,11 @@ body.no-scroll {
   }
 
   .description {
-    margin-left: 10px;
-    margin-right: 10px;
     font-size: 20px;
+  }
+
+  .no_bold {
+    font-size: 16px;
   }
 
   .menuTitle {
@@ -484,6 +546,10 @@ body.no-scroll {
   .description {
     padding: 15px;
     font-size: 18px;
+  }
+
+  .no_bold {
+    font-size: 15px;
   }
 
   .features__title {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -74,21 +74,25 @@
       <section class="mainScreen">
         <h1 class="title">Поминальные обеды в кафе или доставка</h1>
         <h2 class="subtitle">в Ангарске</h2>
-        <p class="description" id="about">
-          В нашем кафе мы организовываем поминальные обеды —
-          спокойно и с уважением к памяти. В кафе тёплая, сдержанная атмосфера и по-настоящему
-          вкусная еда на любой бюджет: готовим по-домашнему, подаём аккуратно и вовремя. Все заботы
-          по подготовке и сервировке обеда берем на себя, чтобы Вы могли это время провести со
-          своими близкими. Понинальные обеды проводятся при заказе от 10 человек, либо Вы можете
-          заказать доставку в пределах города.
-        </p>
+        <div class="description" id="about">
+          <p class="description__text">
+            Организуем поминальные обеды спокойно, деликатно и с уважением к памяти близкого
+            человека.
+          </p>
+          <p class="description__text no_bold">Сдержанная и тёплая атмосфера</p>
+          <p class="description__text no_bold">Домашняя кухня</p>
+          <p class="description__text no_bold">Меню на любой бюджет</p>
+          <p class="description__text no_bold">Аккуратная сервировка</p>
+          <p class="description__text no_bold">Все организационные заботы берём на себя</p>
+          <p class="description__text">Принимаем заказы от 10 человек.</p>
+          <p class="description__text">Возможна доставка по городу.</p>
+        </div>
       </section>
 
       <section class="features" id="whywe">
         <h2 class="features__title">Готовые варианты меню:</h2>
         <div class="wrapCards">
           <div class="card">
-            <div class="cardBg"></div>
             <img
               class="imgCard"
               src="/img/nabor-1.jpg"
@@ -96,7 +100,25 @@
               height="{216}"
               alt="Свадьбы в Ангарске"
             />
-            <p class="textCards">Поминальный набор<br>950 руб./чел.<br>Вес - 1200 гр.</p>
+            <p class="textCards">Поминальный набор<br />950 руб./чел.<br />Вес - 1200 гр.</p>
+            <details class="compositionDetails">
+              <summary class="compositionButton">
+                <span>Состав блюд</span>
+                <span class="compositionButton__icon" aria-hidden="true">▼</span>
+              </summary>
+              <div class="cardComposition">
+                <p>Мясная нарезка</p>
+                <p>Салат Оливье</p>
+                <p>Карбонат с овощами</p>
+                <p>Салат с курицей и папоротником</p>
+                <p>Картофель отварной</p>
+                <p>Котлета домашняя</p>
+                <p>Блин</p>
+                <p>Кисель брусничный</p>
+                <p>Хлеб</p>
+                <p>Компот</p>
+              </div>
+            </details>
           </div>
           <div class="card">
             <div class="cardBg"></div>
@@ -107,7 +129,27 @@
               height="{216}"
               alt="Свадьбы в Ангарске"
             />
-            <p class="textCards">Поминальный обед<br>1150 руб./чел.<br>Вес - 1400 гр.</p>
+            <p class="textCards">Поминальный обед<br />1150 руб./чел.<br />Вес - 1400 гр.</p>
+            <details class="compositionDetails">
+              <summary class="compositionButton">
+                <span>Состав блюд</span>
+                <span class="compositionButton__icon" aria-hidden="true">▼</span>
+              </summary>
+              <div class="cardComposition">
+                <p>Кутья с изюмом</p>
+                <p>Мясная нарезка</p>
+                <p>Салат Оливье</p>
+                <p>Салат гнездо глухаря</p>
+                <p>Салат с курицей и папоротником</p>
+                <p>Бигус с грудинкой</p>
+                <p>Картофель отварной</p>
+                <p>Котлета домашняя</p>
+                <p>Блин</p>
+                <p>Кисель брусничный</p>
+                <p>Хлеб</p>
+                <p>Компот</p>
+              </div>
+            </details>
           </div>
           <div class="card">
             <div class="cardBg"></div>
@@ -118,7 +160,30 @@
               height="{216}"
               alt="Свадьбы в Ангарске"
             />
-            <p class="textCards">Поминальный ужин<br>1650 руб./чел.<br>Вес - 1600 гр.</p>
+            <p class="textCards">Поминальный ужин<br />1650 руб./чел.<br />Вес - 1600 гр.</p>
+            <details class="compositionDetails">
+              <summary class="compositionButton">
+                <span>Состав блюд</span>
+                <span class="compositionButton__icon" aria-hidden="true">▼</span>
+              </summary>
+              <div class="cardComposition">
+                <p>Кутья с изюмом</p>
+                <p>Мясная нарезка</p>
+                <p>Салат Оливье</p>
+                <p>Салат Цезарь с курицей</p>
+                <p>Салат с говядиной</p>
+                <p>Бигус с грудинкой</p>
+                <p>Картофель отварной</p>
+                <p>Куриная отбивная</p>
+                <p>Блин</p>
+                <p>Кисель брусничный</p>
+                <p>Хлеб</p>
+                <p>Компот</p>
+                <p>Кольца кальмара</p>
+                <p>Куриный рулет</p>
+                <p>Вода</p>
+              </div>
+            </details>
           </div>
           <div class="card">
             <div class="cardBg"></div>
@@ -129,7 +194,32 @@
               height="{216}"
               alt="Свадьбы в Ангарске"
             />
-            <p class="textCards">Поминальная трапеза<br>2150 руб./чел.<br>Вес - 1800 гр.</p>
+            <p class="textCards">Поминальная трапеза<br />2150 руб./чел.<br />Вес - 1800 гр.</p>
+            <details class="compositionDetails">
+              <summary class="compositionButton">
+                <span>Состав блюд</span>
+                <span class="compositionButton__icon" aria-hidden="true">▼</span>
+              </summary>
+              <div class="cardComposition">
+                <p>Кутья с изюмом</p>
+                <p>Мясная нарезка</p>
+                <p>Салат с кальмаром</p>
+                <p>Салат Цезарь с курицей</p>
+                <p>Салат с говядиной</p>
+                <p>Бигус с грудинкой</p>
+                <p>Картофель отварной</p>
+                <p>Свиная отбивная</p>
+                <p>Блин</p>
+                <p>Кисель брусничный</p>
+                <p>Хлеб</p>
+                <p>Компот</p>
+                <p>Кольца кальмара</p>
+                <p>Куриный рулет</p>
+                <p>Вода</p>
+                <p>Нарезка рыбная</p>
+                <p>Нарезка овощная</p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
@@ -180,16 +270,44 @@
     <script src="scripts/index.js" type="text/javascript"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106758728', 'ym');
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        ((k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a));
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106758728', 'ym');
 
-      ym(106758728, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+      ym(106758728, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true,
+      });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/106758728" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/106758728"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
     <!-- /Yandex.Metrika counter -->
   </body>
 </html>
